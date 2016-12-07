@@ -36,7 +36,10 @@
   },
   "homepage": "https://github.com/PaulLeCam/react-leaflet",
   "dependencies": {
+    "leaflet-draw": "^0.4.7",
     "lodash": "^4.0.0",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0",
     "warning": "^3.0.0"
   },
   "peerDependencies": {

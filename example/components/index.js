@@ -15,12 +15,22 @@ import AnimateExample from './animate'
 import TooltipExample from './tooltip'
 import PaneExample from './pane'
 import WMSTileLayerExample from './wms-tile-layer'
-
+import ReduxKikoneComponent from './reduxKikoneComponent'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import {shapes} from '../reducer/reducer'
 Leaflet.Icon.Default.imagePath = '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0/images/'
+
+let store = createStore(shapes)
 
 const examples = (
   <div>
+
     <h1>React-Leaflet examples</h1>
+    <h2>KIKONE EXAMPLE</h2>
+    <Provider store={store}>
+      <ReduxKikoneComponent />
+    </Provider>
     <h2>Popup with Marker</h2>
     <SimpleExample />
     <h2>Events</h2>
@@ -50,6 +60,7 @@ const examples = (
     <AnimateExample />
     <h2>WMS tile layer</h2>
     <WMSTileLayerExample />
+
   </div>
 )
 
